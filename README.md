@@ -1,1 +1,7 @@
-# ML_project_2_course
+# Introduction
+
+# Dataset
+
+Датасет можно скачать по ссылке: https://www.dropbox.com/sh/75v5ehq4cdg5g5g/AABvnJSwZI7zXb8_myBA0CLHa?dl=0
+
+# Conclusion
