@@ -12,4 +12,9 @@
 
 Фото\видео людей с дронов: https://github.com/SUTDCV/UAV-Human
 
+Датасет из 650 размеченных кадров записи с видеокамеры. Боксам соотвествуют лейблы: человек, товар, руки.
+
+https://universe.roboflow.com/theft-detection-8oek7/theft-detection-multi-classification-model-using-computer-vision/browse?queryText=&pageSize=50&startingIndex=0&browseQuery=true
+
+
 # Conclusion
