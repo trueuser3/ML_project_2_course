@@ -9,6 +9,8 @@
 +   Python 3.11.5
 +   библиотека GUI - PyQt 5 (pip install pyqt5)
 
+### Декомпозиция:
+
 ### Пример запуска
     python3 program.py
 
