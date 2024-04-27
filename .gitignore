@@ -1,0 +1,7 @@
+venv/
+*.log
+data/*.csv
+models/*.pt
+*.pyc
+.vscode/
+.idea/
