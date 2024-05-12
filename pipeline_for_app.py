@@ -68,7 +68,7 @@ def process_video_with_tracking(model, input_video_path, show_video=True, save_v
 
     # Define the output video writer
     if save_video:
-        fourcc = cv2.VideoWriter_fourcc(*'mp4v')
+        fourcc = cv2.VideoWriter_fourcc(*'avc1')
         out = cv2.VideoWriter(output_video_path, fourcc, fps, (frame_width, frame_height))
 
     while True:
@@ -121,8 +121,8 @@ def process_video_with_tracking(model, input_video_path, show_video=True, save_v
             # cv2.imshow("frame", frame)
             cv2_imshow(frame)
 
-        if cv2.waitKey(1) & 0xFF == ord("q"):
-            break
+        # if cv2.waitKey(1) & 0xFF == ord("q"):
+        #     break
 
     # Release the input video capture and output video writer
     cap.release()
@@ -130,10 +130,11 @@ def process_video_with_tracking(model, input_video_path, show_video=True, save_v
         out.release()
 
     # Close all OpenCV windows
-    cv2.destroyAllWindows()
+    # cv2.destroyAllWindows()
     return results
 
 # Example usage:
-model = YOLO('yolov8n.pt')
-model.fuse()
-results = process_video_with_tracking(model, input_video_path = "InputVideo/input_video.mp4", show_video=False, save_video=True, output_video_path="OutputVideo/output_video.mp4")
+#model = YOLO('yolov8n.pt')
+#model.fuse()
+#results = process_video_with_tracking(model, input_video_path = "InputVideo/input_video.mp4", show_video=False, save_video=True, output_video_path="OutputVideo/output_video.mp4")
+
