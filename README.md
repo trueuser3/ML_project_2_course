@@ -5,19 +5,26 @@
 -  Цирульников Владислав
 -  Шахонин Егор
 
+## Introduction 
+
 Приложение для детекции шоплифтинга, анализирующее поведение покупателя с помощью нейросетей, таких как ViT и yolov8. При обнаружении подозрительного поведения, сотрудники магазинов получают уведомления о деталях кражи в режиме реального времени. 
 
-## Introduction 
----
+Основные функции: 
+-Автоматическое определение вероятности совершения кражи в реальном времени.
+-Активация уведомления персонала при превышении установленного порога вероятности шоплифтинга.
+-Возможность сохранить результат
 
-TODO
+Возможный функционал:
+-учет посещаемости магазина
+
+---
 
 ## Project highlights
 ---
 
 # App-videoplayer AntiBOP
 
-Приложение разработано для взаимодействия с обученной на детекцию краж нейронной сетью. 
+Разработаное на pyQT приложение для взаимодействия с обученной на детекцию краж нейронной сетью. 
 
 ### Description
 
@@ -33,17 +40,23 @@ TODO
 
 ### Decomposition:
 
-TODO
-# app.py - запуск приложения
-# pipeline_for_app.py - функция обработки видео
+ app.py - главное окно приложения
+ pipeline_for_app.py - функция обработки видео
 
 ### example of launching the application
     python3 program.py
 
+### install dependencies 
+    pip install -r requirements.txt
+    
+# Veb application using Gradio
+
+link
+
 
 ### Examples of interaction:
 
-TODO
+![example](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/video_result.mp4)
 
 ## Data 
 ---
@@ -55,13 +68,18 @@ TODO
   
 - Также были взяты [искусственно созданные датасеты](https://universe.roboflow.com/theft-detection-poc/shoplifting-detection-tqzfb/dataset/1), а еще [тык](https://universe.roboflow.com/vit-oru5x/shoplifting_theft_detection2/dataset/7). К ним были применены различные аугментации, такие как поворот и отзеркаливание.
 
+---
+
 ## Model architecture
 
-TODO
+![architecture](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/image.png)
 
 ## Model training && Evaluation
 
-TODO
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/image.png)
+
+TO-DO
+
 
 ## Input-Output
 ![SL_event_record_1__ (1)](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/output/output_grad_1.gif)
