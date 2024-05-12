@@ -5,7 +5,16 @@ from PyQt5.QtWidgets import (QApplication, QFileDialog, QHBoxLayout, QLabel,
         QPushButton, QSizePolicy, QSlider, QStyle, QVBoxLayout, QWidget)
 from PyQt5.QtWidgets import QMainWindow,QWidget, QPushButton, QAction
 from PyQt5.QtGui import QIcon
+
 import sys
+import torch
+import cv2
+from transformers import ViTImageProcessor
+from transformers import ViTForImageClassification
+from ultralytics import YOLO
+from PIL import Image
+from pipeline_for_app import process_video_with_tracking
+
 
 class VideoWindow(QMainWindow):
 
@@ -60,6 +69,15 @@ class VideoWindow(QMainWindow):
         fileName, _ = QFileDialog.getOpenFileName(self, "Open Movie",
                 QDir.homePath())
 
+        print('\n')
+        print(fileName)
+        print('\n')
+        
+        model = YOLO('yolov8n.pt')
+        model.fuse()
+        process_video_with_tracking(model, input_video_path = fileName, show_video=False, save_video=True, output_video_path = 'OutputVideo/output_video.mp4') 
+
+        fileName = '/home/trueuser/Desktop/Project/App/OutputVideo/' + 'output_video.mp4'
         if fileName != '':
             self.mediaPlayer.setMedia(
                     QMediaContent(QUrl.fromLocalFile(fileName)))
