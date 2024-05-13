@@ -57,7 +57,7 @@ TO-DO
 ### install dependencies 
     pip install -r requirements.txt
     
-# Veb application using Gradio
+# Web application using Gradio
 
 TO-DO: link
 
