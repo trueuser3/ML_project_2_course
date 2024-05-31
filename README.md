@@ -18,25 +18,25 @@
 - Автоматическое определение вероятности совершения кражи в реальном времени.
 - Активация уведомления персонала при превышении установленного порога вероятности шоплифтинга.
 - Возможность сохранить результат, отслеживание передвижения посетителей
-  
-
-Возможный функционал:
-- учет посещаемости магазина
 
 ---
 
-## Project highlights
-
-TO-DO
----
 
 # App-videoplayer
 
-Разработаное на pyQT приложение для взаимодействия с обученной на детекцию краж нейронной сетью. 
+Разработаное на PyQT приложение для взаимодействия с обученной на детекцию краж нейронной сетью. 
 
 ### Description
 
-TO-DO
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/player1.jpg)
+
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/player2.jpg)
+
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/player3.jpg)
+
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/player4.jpg)
+
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/player5.jpg)
 
 ### System reqirements
 
