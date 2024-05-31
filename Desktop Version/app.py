@@ -19,18 +19,21 @@ from pipeline_for_app import process_video_with_tracking
 
 import pipeline_for_app
 
-class ProgressBarExample(QWidget):
-    def __init__(self, frame_counter):
+
+
+
+class ProgressBar(QWidget):
+    def __init__(self):
         super().__init__()
 
         self.initUI()
 
-    def initUI(self, frame_counter):
+    def initUI(self):
         self.progress_bar = QProgressBar(self)
-        self.progress_bar.setMaximum(100)  # Устанавливаем максимальное значение прогресс бара
+        self.progress_bar.setMaximum(100)
 
-        self.btn_start = QPushButton('Start', self)
-        self.btn_start.clicked.connect(self.updateProgressBar)
+        # self.btn_start = QPushButton('Start', self)
+        # self.btn_start.clicked.connect(self.updateProgressBar)
 
         layout = QVBoxLayout()
         layout.addWidget(self.progress_bar)
@@ -39,11 +42,12 @@ class ProgressBarExample(QWidget):
         self.setLayout(layout)
 
         self.temp = 0
-        self.maximum = self.frame_counter
+        self.maximum = 100
 
-    def updateProgressBar(self, temp_count):
+    def updateProgressBar(self):
         self.progress_bar.setValue(self.temp)
-        QApplication.processEvents()  # Обновляем GUI, чтобы прогресс бар обновлялся немедленно
+        QApplication.processEvents()  
+
 
 
 class VideoWindow(QMainWindow):
@@ -51,10 +55,6 @@ class VideoWindow(QMainWindow):
     def __init__(self, parent=None):
 
         self.flag = 0
-
-        self.temp_frame_count = 1
-        self.frame_counter = 0
-
 
         super(VideoWindow, self).__init__(parent)
         self.setWindowTitle("VideoPlayer")
@@ -135,6 +135,7 @@ class VideoWindow(QMainWindow):
             # Open the input video file
             cap = cv2.VideoCapture(fileName)
 
+            temp_frame_count = 1
 
             if not cap.isOpened():
                 raise Exception("Error: Could not open video file.")
@@ -152,16 +153,14 @@ class VideoWindow(QMainWindow):
 
 
             #Считаем количество кадров у видео
-
             cap_2 = cv2.VideoCapture(fileName)
 
+            frame_counter = 0
             while True:
                 ret, frame = cap_2.read()
                 if not ret:
                     break
-                self.frame_counter += 1
-
-            self.progress_bar = ProgressBar(frame_counter)
+                frame_counter += 1
 
 
             while True:
@@ -209,9 +208,8 @@ class VideoWindow(QMainWindow):
                             (0, 255, 255),
                             2,
                         )
-                    print(f"Progress: {self.temp_frame_count} / {self.frame_counter}")
-                    self.temp_frame_count += 1
-                    self.progress_bar.updateProgress(self.temp_frame_count)
+                    print(f"Progress: {temp_frame_count} / {frame_counter}")
+                    temp_frame_count += 1
 
                 if True:
                     out.write(frame)
@@ -261,14 +259,13 @@ class VideoWindow(QMainWindow):
                     self.style().standardIcon(QStyle.SP_MediaPlay))
 
 
-
 if __name__ == '__main__':
     app = QApplication(sys.argv)
     player = VideoWindow()
     player.resize(400, 300)
     player.show()
 
-    progress_bar.ex = ProgressBar()
-    progress_bar.ex.show()
+    ex = ProgressBar()
+    ex.show()
 
     sys.exit(app.exec_())
