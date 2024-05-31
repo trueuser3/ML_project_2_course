@@ -77,6 +77,8 @@
 
 ![architecture](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/image.png)
 
+---
+
 ## Model training && Evaluation
 
 ![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/image.png)
@@ -84,6 +86,8 @@
 ### Метрики аналогов ViT
 
 ![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/screen.png)
+
+---
 
 ## YOLOv8m дообучение pretrain модели для задачи детекции и трекинга человека на CCTV-кадрах
 
@@ -97,12 +101,13 @@
 
 ![examples](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/train_batch5880.jpg)
 
-### Сравнение по метрике Intersection over Union c дефолт моделью
+### Сравнение по метрике Intersection over Union c дефолт моделью yolov8m
 
-На тестовом датасете с CCTV-кадрами было проведено сравнение качества выделенных bounding boxes по метрике mean IoU с дефолт yolov8m. Прирост составил 20%
+На тестовом датасете с CCTV-кадрами было проведено сравнение качества выделенных bounding boxes по метрике mean IoU с дефолт yolov8m. Прирост составил 23%
 
 ![iou](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/iou_metrics.jpg)
 
+---
 
 ## Input-Output
 ![SL_event_record_1__ (1)](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/output/output_grad_1.gif)
