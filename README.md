@@ -55,17 +55,14 @@
 
 ### install dependencies 
     pip install -r requirements.txt
-    
 
-### Examples of interaction:
-
-![example](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/video_result.mp4)
+---    
 
 ## Data 
 ---
 #### Data collection
 
-Для обучения нейронной сети были использованы следующие наборы данных:
+В ходе написания проекта для различных целей(дообучение yolo, классификатора ViT, дообучение мультиклассового классификатора) были использованы следующие наборы данных:
 
 - Из [датасета](https://disk.yandex.ru/d/_vjY_E84Bs1p-Q) с записями камер видеонаблюдения были извлечены и преобразованы моменты краж. Затем все кадры были обрезаны по yolo боксам и размечены. [Итоговый датасет](https://drive.google.com/drive/folders/1YTx-Rj6D7dj0WFRjYTJHJ6_gOz8KsCh5) на 12 000 кадров.
   
@@ -73,7 +70,7 @@
 
 - Для учета последовательство действий покупателя были созданы [датасеты](https://drive.google.com/drive/folders/1_PVQkCOosGOxXistgBOYBDgtWUZbdSEn) с 4 действиями, вручную размеченные.
 
-- Для дообучения yolov8m используется [датасет](https://universe.roboflow.com/projecthuman/human-tracking-krcgm/dataset/3) c кадрами, похожими на CCTV. Датасет размечен на 18 классов для уменьшения вероятности спутывания человека с другими объектами.
+- Для дообучения yolov8m используется [датасет](https://universe.roboflow.com/projecthuman/human-tracking-krcgm/dataset/3) c кадрами, похожими на CCTV. Датасет размечен на 18 классов для уменьшения вероятности спутывания человека с другими объектами. А также небольшой [датасет](https://universe.roboflow.com/cpm/human-action-shop/dataset/6) с классификацией действий человека в магазине.
 ---
 
 ## Model architecture
