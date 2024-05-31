@@ -71,6 +71,9 @@
   
 - Также были взяты [искусственно созданные датасеты](https://universe.roboflow.com/theft-detection-poc/shoplifting-detection-tqzfb/dataset/1), а еще [тык](https://universe.roboflow.com/vit-oru5x/shoplifting_theft_detection2/dataset/7). К ним были применены различные аугментации, такие как поворот и отзеркаливание.
 
+- Для учета последовательство действий покупателя были созданы [датасеты](https://drive.google.com/drive/folders/1_PVQkCOosGOxXistgBOYBDgtWUZbdSEn) с 4 действиями, вручную размеченные.
+
+- Для дообучения yolov8m используется [датасет](https://universe.roboflow.com/projecthuman/human-tracking-krcgm/dataset/3) c кадрами, похожими на CCTV. Датасет размечен на 18 классов для уменьшения вероятности спутывания человека с другими объектами.
 ---
 
 ## Model architecture
