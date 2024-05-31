@@ -28,6 +28,8 @@
 
 ### Description
 
+В видеоплеер загружается видео, далее оно обрабатывается, затем полученную запись можно воспроизвести и на моменте кражи включится уведомление.
+
 ![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/player1.jpg)
 ![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/player2.jpg)
 
@@ -54,10 +56,6 @@
 ### install dependencies 
     pip install -r requirements.txt
     
-# web application using Gradio
-
-TO-DO: link
-
 
 ### Examples of interaction:
 
