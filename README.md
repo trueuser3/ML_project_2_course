@@ -18,17 +18,21 @@
 - Автоматическое определение вероятности совершения кражи в реальном времени.
 - Активация уведомления персонала при превышении установленного порога вероятности шоплифтинга.
 - Возможность сохранить результат, отслеживание передвижения посетителей
+  
 
+Возможный функционал:
+- учет посещаемости магазина
+
+---
+
+## Project highlights
+
+TO-DO
 ---
 
 # App-videoplayer
 
-PyQT-приложение для взаимодействия с обученной на детекцию краж нейронной сетью. 
-
-Видео загружается в видеоплеер, происходит обработка и по итогу можно посмотреть обработанное видео. В момент, когда происходит кража (probability > 0.7) включается уведомление (по умолчанию музыка с радио)
-
-### install dependencies 
-    pip install -r requirements.txt
+Разработаное на pyQT приложение для взаимодействия с обученной на детекцию краж нейронной сетью. 
 
 ### Description
 
@@ -49,8 +53,11 @@ TO-DO
 
 ### example of launching the application
     python3 program.py
+
+### install dependencies 
+    pip install -r requirements.txt
     
-# Web application using Gradio
+# web application using Gradio
 
 TO-DO: link
 
@@ -79,7 +86,27 @@ TO-DO: link
 
 ![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/image.png)
 
-TO-DO
+### Метрики аналогов ViT
+
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/screen.png)
+
+## YOLOv8m дообучение pretrain модели для задачи детекции и трекинга человека на CCTV-кадрах
+
+### Полученные метрики:
+
+![metrcis](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/results.png)
+
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/R_curve.png)
+
+### Examples of human detection
+
+![examples](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/train_batch5880.jpg)
+
+### Сравнение по метрике Intersection over Union c дефолт моделью
+
+На тестовом датасете с CCTV-кадрами было проведено сравнение качества выделенных bounding boxes по метрике mean IoU с дефолт yolov8m. Прирост составил 20%
+
+![iou](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/iou_metrics.jpg)
 
 
 ## Input-Output
