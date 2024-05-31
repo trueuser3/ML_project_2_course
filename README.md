@@ -86,7 +86,27 @@ TO-DO: link
 
 ![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/image.png)
 
-TO-DO
+### Метрики аналогов ViT
+
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/screen.png)
+
+## YOLOv8m дообучение pretrain модели для задачи детекции и трекинга человека на CCTV-кадрах
+
+### Полученные метрики:
+
+![metrcis](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/results.png)
+
+![metrics](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/R_curve.png)
+
+### Examples of human detection
+
+![examples](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/train_batch5880.jpg)
+
+### Сравнение по метрике Intersection over Union c дефолт моделью
+
+На тестовом датасете с CCTV-кадрами было проведено сравнение качества выделенных bounding boxes по метрике mean IoU с дефолт yolov8m. Прирост составил 20%
+
+![iou](https://github.com/trueuser3/ML_project_2_course/blob/AnastasiaEmelyanova/samples/iou_metrics.jpg)
 
 
 ## Input-Output
